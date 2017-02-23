@@ -19,8 +19,5 @@ class Post extends Model
         $this->comments()->publish(compact('body'));
     }
 
-    public function publish()
-    {
-        $this->posts()->save($post);
-    }
+   
 }
