@@ -10,12 +10,19 @@
 </head>
 <body>
   @include('partials.nav')
-  
-  <div class="columns">
-    <div class="column is-9">
-      @yield('content')
-    </div>
+  <div class="hero">
+    <section class="section">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          @yield('content')
+        </div>
+        <div class="column is-one-quarters">
+          @include('partials.sidebar')
+        </div>
+      </div>
+    </section>
   </div>
+  
 
   @include('partials.footer')
 </body>
