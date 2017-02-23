@@ -5,6 +5,6 @@
   <title>Welcome</title>
 </head>
 <body>
-  <h1>Welcome to my Blog!</h1>
+  <h1>Welcome to my Blog, {{ $user->name }}!</h1>
 </body>
 </html>
