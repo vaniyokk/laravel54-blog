@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index()
     {
         $posts = Post::latest()->get();
@@ -29,8 +34,11 @@ class PostController extends Controller
             'title' => 'required|min:10',
             'body'  => 'required',
         ]);
-        Post::create(request(['title', 'body']));
 
-        return redirect('/');
+        auth()->user()->publish(
+            new Post(request(['title', 'body']))
+        );
+
+        return redirect()->home();
     }
 }
