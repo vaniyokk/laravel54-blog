@@ -16,8 +16,11 @@ class Post extends Model
 
     public function addComment($body)
     {
-        $this->comments()->publish(compact('body'));
+        Comment::create([
+            'body' => $body,
+            'user_id' => auth()->user()->id,
+            'post_id' => $this->id
+        ]);
     }
-
    
 }
