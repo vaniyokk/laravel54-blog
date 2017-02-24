@@ -12,5 +12,12 @@
   <p>
     {{ $post->body }}
   </p>
+  <br>
+  <p>
+    Tags: 
+    @foreach ($post->tags as $tag)
+      <span class="tag is-light is-medium">{{ $tag->name }}</span>
+    @endforeach
+  </p>
   
 </div>

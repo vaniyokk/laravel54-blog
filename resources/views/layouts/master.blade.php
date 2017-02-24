@@ -9,19 +9,38 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
   @include('partials.nav')
-  <div class="hero">
-    <section class="section">
-      <div class="columns">
-        <div class="column is-three-quarters">
-          @yield('content')
-        </div>
-        <div class="column is-one-quarters">
-          @include('partials.sidebar')
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p class="title">
+              Blog name
+            </p>
+            <p class="subtitle">
+              Here is your future blog
+            </p>
+          </div>
+          
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+
+  </section>
+  
+
+  <section class="section">
+    <div class="columns">
+      <div class="column is-three-quarters">
+        @yield('content')
+      </div>
+      <div class="column is-one-quarters">
+        @include('partials.sidebar')
+      </div>
+    </div>
+  </section>
   
 
   @include('partials.footer')

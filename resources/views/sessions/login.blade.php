@@ -1,4 +1,4 @@
-@extends('layouts.bulma')
+@extends('layouts.auth')
 
 @section('content')
 <section class="hero is-fullheight is-dark is-bold">

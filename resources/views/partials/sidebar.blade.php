@@ -1,9 +1,14 @@
-<div class="box has-bg-gray-0 is-shadowless">
+<div class="box is-shadowless">
   <div class="content">
-    <h3>About</h3>
-    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur pusuis sit amet fermentum. Aenan licinia bibendum nulla sed consecetur.</p>
+    <h3>Tags</h3>
+    <div>
+      @foreach ($tags as $tag)
+        <a href="/posts/tags/{{ $tag }}"><span class="tag is-primary">{{ $tag }}</span></a>
+      @endforeach
+    </div>
   </div>
 </div>
+
 <div class="box is-shadowless">
   <div class="content">
     <h3>Archives</h3>
@@ -20,16 +25,6 @@
       <li><a href="#">June 2013</a></li>
       <li><a href="#">May 2013</a></li>
       <li><a href="#">April 2013</a></li>
-    </ul>
-  </div>
-</div>
-<div class="box is-shadowless">
-  <div class="content">
-    <h3>Elsewhere</h3>
-    <ul>
-      <li><a href="#">Github</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Facebook</a></li>
     </ul>
   </div>
 </div>
